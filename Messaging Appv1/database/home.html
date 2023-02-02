@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="./data/login.css">
+        <link href="https://fonts.googleapis.com/css?family=Boogaloo&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Archivo+Black&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <header id="backdrop">
+            <div class="viipe">
+                <p class="viipe_text">Best Chat</p>
+            </div>
+            </div>
+            <div class="subtext">
+                <p>For people who like to chat</p>
+            </div>
+            <form action="/login" class="sign-in"method="post">
+                <div class="sign-in-text">
+                        <p class="utext">Username:</p>
+                        <input name="username" id="username" class="user" placeholder="username">
+                        <p class="utext">Password:</p>
+                        <input name="password" type="password" id="password" class="user" placeholder="password">
+                </div>
+                <button class="submit">Log In</button>
+                <button id="createb" class="submit sign">Create Account</button>     
+            </form>
+        </header>
+
+    </body>
+  <script>
+      const button = document.getElementById("createb");
+      button.addEventListener("click", create, false);
+      function create(e){
+        e.preventDefault()
+        console.log("oof")
+        window.location.replace("/create")
+      }
+    </script>
+
+</html>

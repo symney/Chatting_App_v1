@@ -1,0 +1,9 @@
+exports.users=
+    [
+    {username:"symney",password:"cameron",id:0},
+    {username:"ordan",password:"ey",id:1},
+    {username:"oof",password:"meme",id:2},
+    {username:"dade",password:"dade",id:3},
+    {username:"ibb",password:"lett",id:4},
+    {username:"username",password:"password",id:5}
+    ]

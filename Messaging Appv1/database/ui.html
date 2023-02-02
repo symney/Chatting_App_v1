@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="./data/ui.css">
+		<title>Best Chat</title>
+    <script src="https://messaging-app--symneycameron.repl.co/data/socket.io-client/dist/socket.io.js"></script>
+    <script src="https://messaging-app--symneycameron.repl.co/data/frontend.js"></script>
+    <script type="text/javascript">
+      function myFunc() {
+        const urlParams = new URLSearchParams(window.location.search);
+        var username = urlParams.get('user');
+        console.log("button click")
+        if(document.getElementById("enter").value!=""){
+        var text = document.getElementById("enter").value
+        document.getElementById("enter").value = ""
+        socket.emit("new message", {"text":text,username:username});
+      }
+    }
+  </script>
+	</head>
+	<body class="background">
+		<header id="surround">
+			<div class="messages" id="messages">
+				
+			</div>
+			
+			<div class="connected">
+				<p class="connected text" id="clients">oof connected</p>
+			</div>
+			
+			<div class="text">
+				<input  class="text enter" id="enter"placeholder="Enter your text">
+				<button class="text send" onclick="myFunc()"></button>
+			<div>
+		</header>
+	</body>
+</html>
